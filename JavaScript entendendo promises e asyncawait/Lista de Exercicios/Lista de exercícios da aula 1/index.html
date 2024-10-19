@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mundo Pet</title>
+</head>
+    <body>
+        <aside>
+            <img src="./img/Logo.svg" alt="Logo Mundo Pet">
+            <nav>
+                <ul class="lista-links">
+                    <li>
+                        <a href="#" class="link-destaque">Publicar</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/feed.svg" alt="">
+                            Feed
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/cat.svg" alt="">
+                            Perfil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/info.svg" alt="">
+                            Sobre nós
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/logout.svg" alt="">
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="container-upload-image">
+                <div class="container-image">
+                    <img src="./img/Gato laranja.svg" class="main-image">
+                </div>
+                <button>Carregar Imagem</button>
+                <div class="container-image-nome">
+                    <p>imagem</p>
+                    <img src="./img/upload.svg">
+                </div>
+            </div>
+
+            <div class="container-descricao">
+                <h1>Nova foto</h1>
+                <form>
+                    <div>
+                        <label for="nome">Titulo da foto</label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+
+                    <div>
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" name="descricao"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="categoria">Hashtags</label>
+                        <input type="text" id="categoria" name="categoria">
+                    </div>
+
+                    <ul class="lista-tags">
+                        <li>
+                            <p>Gato laranja</p>
+                            <img src="./img/close.svg">
+                        </li>
+                        <li>
+                            <p>Gato adulto</p>
+                        </li>
+                    </ul>
+
+                    <div class="container-button">
+                        <button class="button-descartar">Descartar</button>
+                        <button class="button-publicar">Publicar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+    </body>
+</html>

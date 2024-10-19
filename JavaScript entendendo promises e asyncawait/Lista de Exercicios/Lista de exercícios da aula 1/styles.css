@@ -1,0 +1,243 @@
+:root {
+    --background-color: #000000;
+    --background-content: #211727;
+    --background-input: #E7E5E5;
+    --font-white: #E1E1E1;
+    --font-gray: #888888;
+    --primary-color: #E465DF;
+    --font-family: 'Prompt', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-white);
+    font-family: var(--font-family);
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    height: 100vh;
+    gap: 27px;
+    padding: 56px 0;
+}
+
+aside {
+    height: 100%;
+    background-color: var(--background-content);
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    border-radius: 8px;
+}
+
+.lista-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.lista-links li a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--font-gray);
+    text-decoration: none;
+    align-items: center;
+}
+
+.lista-links li:first-of-type a{
+    color: var(--primary-color);
+}
+
+.link-destaque {
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+main {
+    background-color: var(--background-content);
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+}
+
+.main-image {
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-image {
+    height: 368px;
+    padding: 24px 16px;
+    background-color: var(--background-input);
+    border-radius: 8px;
+}
+
+.container-upload-image button {
+    margin: 16px 0 8px 0;
+    background-color: var(--background-content);
+    border: 1px solid var(--font-gray);
+    border-radius: 8px;
+    color: var(--font-gray);
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+}
+
+.container-upload-image button::after {
+    content: "";
+    background-image: url("./img/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    margin-left: 8px
+}
+
+.container-image-nome {
+    display: flex;
+    gap: 8px;
+    color: var(--font-gray);
+    font-size: 15px;
+}
+
+.container-descricao {
+    width: 422px;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+form div input, textarea {
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: var(--background-input);
+    color: var(--background-content);
+    border: none;
+    font-family: var(--font-family);
+    line-height: 22.5px;
+}
+
+form div input {
+    height: 39px;
+}
+
+textarea {
+    height: 161px;
+}
+
+.lista-tags {
+    display: flex;
+    gap: 15px;
+}
+
+.lista-tags li {
+    display: flex;
+    background-color: var(--background-input);
+    font-family: var(--font-family);
+    color: var(--background-content);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 4px 8px;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.container-button {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.container-button button {
+    width: 50%;
+    padding: 12px 32px 12px 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.button-descartar {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--background-content);
+    position: relative;
+}
+
+.button-descartar::after {
+    content: "";
+    background-image: url("./img/arrow_forward.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    margin-left: 8px;
+}
+
+.button-publicar {
+    border: none;
+    color: var(--background-content);
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.button-publicar::after {
+    content: "";
+    background-image: url("./img/arrow_forward\ \(2\).svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    margin-left: 8px;
+}

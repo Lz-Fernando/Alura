@@ -79,12 +79,11 @@ main {
 .main-image {
     border-radius: 8px;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .container-image {
     height: 368px;
-    padding: 24px 16px;
     background-color: var(--background-input);
     border-radius: 8px;
 }

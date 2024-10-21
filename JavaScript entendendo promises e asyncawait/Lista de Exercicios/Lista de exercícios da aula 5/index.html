@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de exercícios da aula 5</title>
+</head>
+<body>
+    <!--Exercício 3) Limpando formulário-->
+    <h2>Exercício 3) Limpando formulário</h2>
+    <form id="projeto-form">
+        <label for="nome">Nome do Projeto:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="imagem">Imagem do Projeto:</label><br>
+        <input type="file" id="imagem" name="imagem"><br>
+        <img id="imagem-preview" src="./img/imagem1.png" alt="Imagem do Projeto"><br><br>
+
+        <label for="tags">Tags:</label><br>
+        <input type="text" id="tags" name="tags" placeholder="Adicione tags separadas por vírgula"><br><br>
+        <div id="tags-list">
+            <!-- Lista de tags será preenchida dinamicamente -->
+        </div>
+
+        <button type="submit">Salvar Projeto</button>
+        <button type="button" class="botao-limpar">Limpar</button>
+    </form>
+
+    <h2>Projetos</h2>
+    <div id="lista-projetos">
+        <!-- Lista de projetos será preenchida dinamicamente -->
+    </div>
+</body>
+</html>

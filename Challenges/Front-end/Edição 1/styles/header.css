@@ -1,3 +1,8 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .input-texto {
   padding: 16px 14px;
   border-radius: 8px;

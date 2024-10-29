@@ -6,6 +6,10 @@
   color: var(--text-input-color);
 }
 
+.input-texto::placeholder {
+  color: var(--text-input-color);
+}
+
 .pesquisa{
   width: 752px;
 }

@@ -1,0 +1,11 @@
+.input-texto {
+  padding: 16px 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--input-color);
+  color: var(--text-input-color);
+}
+
+.pesquisa{
+  width: 752px;
+}

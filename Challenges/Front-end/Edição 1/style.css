@@ -1,2 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url(./styles/reset.css);
+@import url(./styles/header.css);
 
+:root {
+  --font: 'Inter';
+  --dark-blue: #051D3B;
+  --input-color: #FFFFFF29;
+  --text-input-color: #FFFFFF;
+}
+
+body {
+  background-color: var(--dark-blue);
+  padding: 32px;
+}
+
+.title-font {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 31.5px;
+}
+
+.body-font {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+ .sidebar-font {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 40%;
+}

@@ -15,20 +15,26 @@ body {
 }
 
 .title-font {
+  font-family: var(--font);
   font-size: 21px;
   font-weight: 700;
   line-height: 31.5px;
+  color: var(--text-input-color);
 }
 
 .body-font {
+  font-family: var(--font);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  color: var(--text-input-color);
 }
 
  .sidebar-font {
+  font-family: var(--font);
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 40%;
+  color: var(--text-input-color);
 }

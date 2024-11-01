@@ -1,0 +1,27 @@
+aside {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lista-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.item-menu img {
+  padding: 16px;
+  background-color: var(--btn-color);
+  border-radius: 16px;
+}
+

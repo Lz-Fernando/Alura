@@ -1,5 +1,6 @@
-aside {
+.menu {
   height: 100%;
+  width: 189px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -15,7 +16,7 @@ aside {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   text-decoration: none;
 }
 

@@ -13,11 +13,12 @@ header {
 }
 
 .input-texto::placeholder {
-  color: var(--text-input-color);
+  color: var(--placeholder-color);
+  font-size: 16px;
 }
 
 .pesquisa{
-  width: 752px;
+  width: 724px;
 }
 
 .perfil {
@@ -25,4 +26,5 @@ header {
   align-items: center;
   gap: 8px;
   padding: 12px;
+  width: 102px;
 }

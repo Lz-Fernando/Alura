@@ -1,19 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url(./styles/reset.css);
 @import url(./styles/header.css);
-@import url(./styles/aside.css);
+@import url(./styles/menu.css);
+@import url(./styles/dadosProjeto.css);
+@import url(./styles/principal.css);
 
 :root {
   --font: 'Inter';
   --dark-blue: #051D3B;
   --input-color: #FFFFFF29;
   --text-input-color: #FFFFFF;
+  --placeholder-color: #FFFFFF29;
   --btn-color: #5081FB29;
 }
 
 body {
   background-color: var(--dark-blue);
   padding: 32px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
 .title-font {

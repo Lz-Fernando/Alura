@@ -10,7 +10,7 @@ public class App {
 
         //Média calculada pelas 3 notas
         double media = (9.8 + 6.3 + 8.0) / 3;
-        System.out.println(media);
+        System.out.println(String.format("%.2f", media));
         String sinopse;
         sinopse = """
                 Filme Top Gun

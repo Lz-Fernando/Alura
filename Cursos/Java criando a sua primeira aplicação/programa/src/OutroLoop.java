@@ -16,7 +16,7 @@ public class OutroLoop {
                 totalDeNotas++;
             }
         }
-        
+
         System.out.println("Média de avaliações: " + mediaAvaliacao / totalDeNotas);
     }
 }

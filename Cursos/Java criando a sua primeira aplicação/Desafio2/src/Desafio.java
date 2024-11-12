@@ -8,10 +8,10 @@ public class Desafio {
 
         //******************************
 
-        double variavel01 = (int) 5.8;
-        int variavel02 = 4;
+        double variavel01 = 5.8;
+        int variavel02 = (int) variavel01;
 
-        System.out.println(variavel01 + ", " + variavel02);
+        System.out.println(variavel02);
 
         //******************************
 

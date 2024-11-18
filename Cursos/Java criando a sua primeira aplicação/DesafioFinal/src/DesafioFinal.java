@@ -7,6 +7,7 @@ public class DesafioFinal {
         String nome = "Fernando";
         String tipoConta = "Corrente";
         double saldo = 1599.99;
+        int selecaoMenu;
 
         System.out.println("\n************************");
         System.out.println("\nNome do cliente: " + nome);
@@ -16,14 +17,14 @@ public class DesafioFinal {
 
 
         while (true) {
-            int selecaoMenu;
 
-            System.out.println("1 - Visualizar saldo");
-            System.out.println("2 - Registrar receita");
-            System.out.println("3 - Registrar despesa");
-            System.out.println("0 - Encerrar programa");
-
-            System.out.println("\nDigite o número referente a qual ação deseja realizar: ");
+            System.out.println("""
+            1 - Visualizar saldo
+            2 - Registrar receita
+            3 - Registrar despesa
+            0 - Encerrar programa
+            Digite o número referente a qual ação deseja realizar:
+            """);
             selecaoMenu = scanner.nextInt();
 
             if (selecaoMenu == 1) {
@@ -49,16 +50,25 @@ public class DesafioFinal {
 
                 System.out.println("Digite o valor da despesa: R$");
                 despesa = scanner.nextDouble();
-                saldo -= despesa;
 
-                System.out.println("\n************************");
-                System.out.println("O saldo foi atualizado para: R$" + saldo);
-                System.out.println("************************\n");
+                if (despesa <= saldo) {
+                    saldo -= despesa;
+
+                    System.out.println("\n************************");
+                    System.out.println("O saldo foi atualizado para: R$" + saldo);
+                    System.out.println("************************\n");
+                } else {
+                    System.out.println("Saldo insuficiente para pagamento dessa despesa!\n");
+                }
             }
 
             else if (selecaoMenu == 0) {
                 System.out.println("O sistema foi encerrado!");
                 break;
+            }
+
+            else {
+                System.out.println("Opção do menu inválida!\n");
             }
         }
     }

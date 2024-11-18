@@ -1,5 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Movie meuFilme = new Movie();
+        meuFilme.nome = "O poderoso chefão";
+        meuFilme.anoLancamento = 1978;
+        meuFilme.duracaoMinutos = 180;
+
+        System.out.println(meuFilme.nome);
+        System.out.println(meuFilme.anoLancamento);
     }
 }

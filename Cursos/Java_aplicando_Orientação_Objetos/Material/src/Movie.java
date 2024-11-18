@@ -5,6 +5,4 @@ public class Movie {
     double avaliacao;
     int totalAvaliacoes;
     int duracaoMinutos;
-
-    
 }

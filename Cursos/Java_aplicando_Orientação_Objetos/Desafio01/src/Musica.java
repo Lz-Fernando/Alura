@@ -2,25 +2,23 @@ public class Musica {
     String titulo;
     String artista;
     int anoLancamento;
-    int avaliacaoParcial;
-    double avaliacao;
+    double somaDasAvaliacao;
     int numAvaliacoes;
 
-    void fichaTecnica () {
+    void exibeFichaTecnica () {
         System.out.printf("""
                 Título da música: %s
                 Artísta: %s
                 Ano de lançamento: %d
-                Avaliação: %f
-                """, titulo, artista, anoLancamento, avaliacao);
+                """, titulo, artista, anoLancamento);
     }
 
-    void avaliarMusica (int nota) {
-        avaliacaoParcial += nota;
+    void avaliarMusica (double nota) {
+        somaDasAvaliacao += nota;
         numAvaliacoes++;
     }
 
     double gerarMediaDeAvaliacoes () {
-        return avaliacao = avaliacaoParcial / numAvaliacoes;
+        return somaDasAvaliacao / numAvaliacoes;
     }
 }

@@ -6,6 +6,6 @@ public class Aluno {
         System.out.printf("""
                 Nome do aluno: %s
                 Idade: %d
-                """);
+                """, nome, idade);
     }
 }

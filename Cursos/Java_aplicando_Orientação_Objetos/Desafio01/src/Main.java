@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Aluno aluno1 = new Aluno();
+        Aluno meualuno = new Aluno();
 
-        aluno1.nome = "Fernando";
-        aluno1.idade = 21;
+        meualuno.nome = "Fernando";
+        meualuno.idade = 21;
 
-        aluno1.exibirInformacoesPessoais();
+        meualuno.exibirInformacoesPessoais();
     }
 }

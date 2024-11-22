@@ -12,6 +12,7 @@ public class Main {
         meuFilme.avalia(10);
         meuFilme.avalia(5);
 
+        System.out.println("Total de avaliações: " + meuFilme.getTotalAvaliacoes());
         System.out.println("Média de avaliações do filme: " + meuFilme.pegaMedia());
     }
 }

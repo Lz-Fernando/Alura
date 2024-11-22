@@ -21,4 +21,8 @@ public class Movie {
     double pegaMedia () {
         return somaDasAvaliacoes / totalAvaliacoes;
     }
+
+    int getTotalAvaliacoes() {
+        return totalAvaliacoes;
+    }
 }

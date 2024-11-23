@@ -18,11 +18,11 @@ public class idadePessoa {
         this.idade = idade;
     }
 
-    public void verificarIdade (int idade) {
-        if (idade > 18) {
-            System.out.println("É maior de idade");
+    public void verificarIdade () {
+        if (idade >= 18) {
+            System.out.println(nome + " é maior de idade");
         } else {
-            System.out.println("Não é maior de idade");
+            System.out.println(nome + " não é maior de idade");
         }
     }
 }

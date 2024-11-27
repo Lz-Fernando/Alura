@@ -3,11 +3,11 @@ import br.com.alura.screenmatch.modelos.Serie;
 
 public class Main {
     public static void main(String[] args) {
-        Movie meuFilme = new Movie();
 
+        Movie meuFilme = new Movie();
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoLancamento(1970);
-        meuFilme.setDuracaoMinutos(180);
+        meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
@@ -22,5 +22,7 @@ public class Main {
         lost.setAnoLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
+        lost.setMinutosPorEpisodio(50);
+        System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
     }
 }

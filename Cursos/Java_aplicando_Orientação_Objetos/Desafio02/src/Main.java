@@ -33,6 +33,17 @@ public class Main {
         pessoa2.verificarIdade();*/
 
         //3)
+        /*Produto produto = new Produto("Celular", 2000.0);
 
+        System.out.printf("""
+                Nome do Produto: %s
+                Preço: %f
+                """, produto.getNome(), produto.getPreco());
+
+        produto.aplicarDesconto(10);
+        System.out.println("Novo preço após desconto: " + produto.getPreco());*/
+
+        //4)
+        
     }
 }

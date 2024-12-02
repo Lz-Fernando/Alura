@@ -2,6 +2,11 @@ public class Produto {
     private String nome;
     private double preco;
 
+    public Produto (String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -18,7 +23,8 @@ public class Produto {
         this.preco = preco;
     }
 
-    public double aplicarDesconto (double preco, int desconto) {
-        return preco - (preco * desconto / 100);
+    public void aplicarDesconto (int percentual) {
+        double desconto = preco * (percentual / 100);
+        preco -= desconto;
     }
 }

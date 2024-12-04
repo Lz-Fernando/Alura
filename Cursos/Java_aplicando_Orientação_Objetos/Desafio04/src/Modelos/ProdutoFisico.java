@@ -2,15 +2,10 @@ package Modelos;
 
 import Interfaces.Calculavel;
 
-public class ProdutoFisico implements Calculavel {
-    double preco;
-    double desconto;
-    double frete;
-    double precoFinal;
-
+public class ProdutoFisico extends Produto implements Calculavel {
 
     @Override
     public double calcularPrecoFinal() {
-        return precoFinal = frete + preco * (desconto / 100);
+        return preco * 1.05;
     }
 }

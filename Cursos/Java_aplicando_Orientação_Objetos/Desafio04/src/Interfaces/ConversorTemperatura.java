@@ -1,6 +1,6 @@
 package Interfaces;
 
 public interface ConversorTemperatura {
-    void celsiusParaFahrenheit(double celsius);
-    void fahrenheitParaCelsius(double fahrenheit);
+    double celsiusParaFahrenheit(double celsius);
+    double fahrenheitParaCelsius(double fahrenheit);
 }

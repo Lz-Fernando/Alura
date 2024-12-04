@@ -3,19 +3,16 @@ package Modelos;
 import Interfaces.CalculoGeometrico;
 
 public class CalculadoraSalaRetangular implements CalculoGeometrico {
-    private double altura;
-    private double largura;
-    private double area;
-    private double perimetro;
-
 
     @Override
-    public double calcularArea(double altura, double largura) {
-        return area = altura * largura;
+    public void calcularArea(double altura, double largura) {
+        double area = altura * largura;
+        System.out.println("A área da sala retangular é: " + area);
     }
 
     @Override
-    public double calcularPerimetro(double altura, double largura) {
-        return perimetro = altura + largura;
+    public void calcularPerimetro(double altura, double largura) {
+        double perimetro = 2 * (altura + largura);
+        System.out.println("O perimetro da sala retangular é: " + perimetro);
     }
 }

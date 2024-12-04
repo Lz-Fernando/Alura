@@ -2,14 +2,11 @@ package Modelos;
 
 import Interfaces.Calculavel;
 
-public class Livro implements Calculavel{
-    double preco;
-    double desconto;
-    double precoFinal;
-
+public class Livro extends Produto implements Calculavel{
+    private String autor;
 
     @Override
     public double calcularPrecoFinal() {
-        return precoFinal = preco * (desconto / 100);
+        return preco * 0.9;
     }
 }

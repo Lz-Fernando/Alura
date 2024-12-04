@@ -1,5 +1,6 @@
 package Interfaces;
 
 public interface Vendavel {
-    double precoTotal();
+    double precoTotal(int quantidade);
+    void aplicarDesconto(double percentualDesconto);
 }

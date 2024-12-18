@@ -19,4 +19,13 @@ public class podcast extends Audio{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalCurtidas() > 500) {
+            return 10;
+        } else {
+            return 8;
+        }
+    }
 }

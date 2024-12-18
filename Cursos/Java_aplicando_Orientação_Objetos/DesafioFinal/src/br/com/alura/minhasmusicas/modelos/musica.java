@@ -28,4 +28,13 @@ public class musica extends Audio{
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalReproducoes() > 2000) {
+            return 10;
+        } else {
+            return 8;
+        }
+    }
 }

@@ -29,9 +29,9 @@ public class Main {
         for (int i = 0; i < 1000; i++) {
             meuPodcast.curte();
         }
+        
+        MinhasPreferidas preferidas = new MinhasPreferidas();
+        preferidas.inclui(meuPodcast);
+        preferidas.inclui(minhaMusica);
     }
-
-    MinhasPreferidas preferidas = new MinhasPreferidas();
-    preferidas.inclui(meuPodcast);
-    preferidas.inclui(minhaMusica);
 }

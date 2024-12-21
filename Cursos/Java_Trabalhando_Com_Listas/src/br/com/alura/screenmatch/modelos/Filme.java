@@ -3,6 +3,10 @@ package br.com.alura.screenmatch.modelos;
 import br.com.alura.screenmatch.calculos.Classificavel;
 
 public class Filme extends Titulo implements Classificavel {
+    public Filme(String dogville){
+        super();
+    }
+
     private String diretor;
 
     public String getDiretor() {

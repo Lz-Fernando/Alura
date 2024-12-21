@@ -55,13 +55,12 @@ public class Main {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDeFe = new Filme();
-        filmeDeFe.setNome("Dogville");
+        var filmeDeFe = new Filme("Dogville");
         filmeDeFe.setDuracaoEmMinutos(200);
         filmeDeFe.setAnoDeLancamento(2003);
         filmeDeFe.avalia(10);
 
-        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        ArrayList<Object> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDeFe);
         listaDeFilmes.add(meuFilme);
         listaDeFilmes.add(outroFilme);
@@ -69,5 +68,7 @@ public class Main {
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
         System.out.println("ToString do filme: " + listaDeFilmes.getFirst().toString());
+
+        Object objeto = filmeDeFe;
     }
 }

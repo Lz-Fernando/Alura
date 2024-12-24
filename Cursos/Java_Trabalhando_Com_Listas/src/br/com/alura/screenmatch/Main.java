@@ -60,7 +60,7 @@ public class Main {
         filmeDeFe.setAnoDeLancamento(2003);
         filmeDeFe.avalia(10);
 
-        ArrayList<Object> listaDeFilmes = new ArrayList<>();
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDeFe);
         listaDeFilmes.add(meuFilme);
         listaDeFilmes.add(outroFilme);

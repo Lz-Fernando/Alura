@@ -16,7 +16,7 @@ public class Quadrado implements Formas{
     }
 
     @Override
-    public double calcularArea(double valor) {
+    public double calcularArea() {
         return metrica * metrica;
     }
 }

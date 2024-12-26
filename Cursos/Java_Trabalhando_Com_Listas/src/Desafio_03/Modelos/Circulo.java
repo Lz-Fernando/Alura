@@ -18,7 +18,7 @@ public class Circulo implements Formas{
     }
 
     @Override
-    public double calcularArea(double raio) {
-        return 3.14 * (raio * raio);
+    public double calcularArea() {
+        return Math.PI * (raio * raio);
     }
 }

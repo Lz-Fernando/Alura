@@ -41,11 +41,9 @@ public class Main {
         produtos.add(produto02);
 
         Double media = 0.0;
-
         for (Produto produto : produtos) {
             Double total = produto.getPreco();
             media = total / produtos.size();
-
         }
 
         System.out.println(media);
@@ -59,27 +57,21 @@ public class Main {
         Quadrado quadrado2 = new Quadrado(10);
         Quadrado quadrado3 = new Quadrado(5);
 
-        ArrayList<Circulo> listaCirculos = new ArrayList<>();
-        listaCirculos.add(circulo1);
-        listaCirculos.add(circulo2);
-        listaCirculos.add(circulo3);
+        ArrayList<Formas> listaFormas = new ArrayList<>();
+        listaFormas.add(circulo1);
+        listaFormas.add(circulo2);
+        listaFormas.add(circulo3);
+        listaFormas.add(quadrado1);
+        listaFormas.add(quadrado2);
+        listaFormas.add(quadrado3);
 
-        ArrayList<Quadrado> listaQuadrados = new ArrayList<>();
-        listaQuadrados.add(quadrado1);
-        listaQuadrados.add(quadrado2);
-        listaQuadrados.add(quadrado3);
-
-        for (Circulo circulo : listaCirculos) {
-            System.out.println("A área deste círculo é: " + circulo.calcularArea(circulo.getRaio()));
-        }
-
-        for (Quadrado quadrado : listaQuadrados) {
-            System.out.println("A área deste quadrado é: " + quadrado.calcularArea(quadrado.getMetrica()));
+        for (Formas forma : listaFormas) {
+            System.out.println("A área é: " + forma.calcularArea());
         }
 
 
         //6°
-        ContaBancaria contaBancaria1 = new ContaBancaria(1, 10000.0);
+        ContaBancaria contaBancaria1 = new ContaBancaria(1, 100.0);
         ContaBancaria contaBancaria2 = new ContaBancaria(2, 10.0);
         ContaBancaria contaBancaria3 = new ContaBancaria(3, 2000.0);
 

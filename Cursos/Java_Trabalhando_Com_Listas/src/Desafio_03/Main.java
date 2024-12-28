@@ -53,7 +53,7 @@ public class Main {
         System.out.println(media);
 
         //5°
-        
+
 
 
         //6°

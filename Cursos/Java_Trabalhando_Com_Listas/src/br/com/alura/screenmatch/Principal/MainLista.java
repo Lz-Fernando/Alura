@@ -4,9 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class MainLista {
     public static void main(String[] args) {
@@ -18,7 +16,20 @@ public class MainLista {
         Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.avalia(9);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+//        ArrayList<Titulo> lista = new ArrayList<>();
+//        lista.add(filmeDeFe);
+//        lista.add(meuFilme);
+//        lista.add(outroFilme);
+//        lista.add(lost);
+//
+//        for (Titulo  item : lista) {
+//            System.out.println(item.getNome());
+//            if (item instanceof Filme filme) {
+//                System.out.println("Classificação" + filme.getClassificacao());
+//            }
+//        }
+
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmeDeFe);
         lista.add(meuFilme);
         lista.add(outroFilme);

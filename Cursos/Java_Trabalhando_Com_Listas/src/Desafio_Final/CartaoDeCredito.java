@@ -6,7 +6,7 @@ import java.util.List;
 public class CartaoDeCredito {
     private double  limite;
     private double saldo;
-    private double List<Compra> compras;
+    private List<Compra> compras;
 
     public CartaoDeCredito(double limite) {
         this.limite = limite;

@@ -21,27 +21,32 @@ public class PrincipalComBusca {
 
         String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=58c1d0b7";
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(endereco))
-                .build();
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
-
-        String json = response.body();
-        System.out.println(json);
-
-        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
-        TituloOMDB meuTituloOMDB = gson.fromJson(json, TituloOMDB.class);
-        System.out.println(meuTituloOMDB);
-
         try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(endereco))
+                    .build();
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+
+            String json = response.body();
+            System.out.println(json);
+
+            Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+            TituloOMDB meuTituloOMDB = gson.fromJson(json, TituloOMDB.class);
+            System.out.println(meuTituloOMDB);
+
+
             Titulo meuTitulo = new Titulo(meuTituloOMDB);
             System.out.println("Titulo já convertido");
             System.out.println(meuTitulo);
         } catch (NumberFormatException e) {
             System.out.println("Aconteceu um erro: ");
             System.out.println(e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Algum erro de argumento na busca, verifique o endereço")
+        } catch (Exception e) {
+            System.out.println("Aconteceu algo, não sei o que");
         }
 
         System.out.println("O programa finalizou corretamente!");

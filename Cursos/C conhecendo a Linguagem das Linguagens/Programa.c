@@ -12,7 +12,13 @@ int main () {
 
 	printf("Chute um número: ");
 	scanf("%d", &chute);
-	printf("Seu chute foi %d!\n", chute);	
+	printf("Seu chute foi %d!\n", chute);
+
+	if (chute == numeroSecreto) {
+		printf("Parabéns, você acertou!\n");
+	} else {
+		printf("Você errou!\n");
+	}
 	
 	printf("O número %d é o secreto!\n", numeroSecreto);	
 	

@@ -18,9 +18,17 @@ int main () {
 		scanf("%d", &chute);
 		printf("Seu chute foi %d!\n", chute);
 
+		
+
 		int acertou = (chute == numeroSecreto);
 		int maior = chute > numeroSecreto;
 
+		if(chute < 0) {
+			printf("Você não pode chutar números negativos!\n");
+			i--;
+			continue;
+		}
+		
 		if (acertou) {
 			printf("Parabéns, você acertou!\n");
 			break;

@@ -11,21 +11,20 @@ int main () {
 
 	int numeroSecreto = 42;
 	int chute;
+	int tentativas = 1;
 
-	for (int i = 1; i <= NUMERO_DE_TENTATIVAS; i++) {
-		printf("Tentativa %d de %d\n", i, NUMERO_DE_TENTATIVAS);
+	while(1) {
+	//for (int i = 1; i <= NUMERO_DE_TENTATIVAS; i++) {
+		printf("Tentativa %d de %d\n", tentativas);
 		printf("Chute um número: ");
 		scanf("%d", &chute);
 		printf("Seu chute foi %d!\n", chute);
-
-		
 
 		int acertou = (chute == numeroSecreto);
 		int maior = chute > numeroSecreto;
 
 		if(chute < 0) {
 			printf("Você não pode chutar números negativos!\n");
-			i--;
 			continue;
 		}
 		
@@ -37,9 +36,12 @@ int main () {
 		} else {
 			printf("Seu chute é menor que o número secreto\n");
 		}
+
+		tentativas++;
 	}
 
 	printf("Fim de jogo!\n");
+	printf("Você acertou em %d tentativas!", tentativas);
 
 	return 0;
 }

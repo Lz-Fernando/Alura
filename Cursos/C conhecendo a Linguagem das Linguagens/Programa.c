@@ -10,7 +10,10 @@ int main () {
 	printf("* Bem vindo ao nosso jogo de adivinhação *\n");
 	printf("*****************************************\n");
 
-	int numeroSecreto = 42;
+	int segundos = time(0);
+	srand(segundos);
+	int numeroGrande = rand();
+	int numeroSecreto = numeroGrande % 100;
 	int chute;
 	int tentativas = 1;
 	double pontos = 1000;

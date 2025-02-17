@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #define NUMERO_DE_TENTATIVAS 5
 
@@ -13,7 +14,6 @@ int main () {
 	int chute;
 	int tentativas = 1;
 	double pontos = 1000;
-	int novosPontos = (chute - numeroSecreto) / 2;
 
 	while(1) {
 	//for (int i = 1; i <= NUMERO_DE_TENTATIVAS; i++) {
@@ -40,7 +40,7 @@ int main () {
 		}
 
 		tentativas++;
-		double pontosPerdidos = (double)(chute - numeroSecreto) / 2;
+		double pontosPerdidos = abs(chute - numeroSecreto) / (double)2;
 		pontos = pontos - pontosPerdidos;
 	}
 

@@ -12,12 +12,12 @@ int main () {
 	int numeroSecreto = 42;
 	int chute;
 	int tentativas = 1;
-	int pontos = 1000;
+	double pontos = 1000;
 	int novosPontos = (chute - numeroSecreto) / 2;
 
 	while(1) {
 	//for (int i = 1; i <= NUMERO_DE_TENTATIVAS; i++) {
-		printf("Tentativa %d de %d\n", tentativas);
+		printf("Tentativa %d", tentativas);
 		printf("Chute um número: ");
 		scanf("%d", &chute);
 		printf("Seu chute foi %d!\n", chute);
@@ -40,13 +40,13 @@ int main () {
 		}
 
 		tentativas++;
-		int pontosPerdidos = (chute - numeroSecreto) / 2;
+		double pontosPerdidos = (chute - numeroSecreto) / 2.0;
 		pontos = pontos - pontosPerdidos;
 	}
 
 	printf("Fim de jogo!\n");
 	printf("Você acertou em %d tentativas!\n", tentativas);
-	printf("Total de pontos:%d \n", pontos);
+	printf("Total de pontos:%.1f \n", pontos);
 
 	return 0;
 }

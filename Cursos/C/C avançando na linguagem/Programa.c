@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -9,6 +10,14 @@ int main()
 	int acertou, enforcou = 0;
 
 	do {
+		char chute;
+		scanf("%c", &chute);
+
+		for (int i = 0; i < strlen(palavraSecreta); i++) {
+			if (palavraSecreta[i] == chute) {
+				printf("A posição %d tem essa letra!\n", i);
+			}
+		}
 
 	} while (!acertou && !enforcou);
 

@@ -6,6 +6,12 @@ int main()
 
 	sprintf(palavraSecreta, "MELANCIA");
 
+	int acertou, enforcou = 0;
+
+	do {
+
+	} while (!acertou && !enforcou);
+
 	printf("%s", palavraSecreta);
 
 	/*palavraSecreta[0] = "M";

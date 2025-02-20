@@ -1,21 +1,26 @@
 #include <stdio.h>
 #include <string.h>
 
+//variáveis globais
+char palavraSecreta[20];
+char chutes[26];
+int tentativas = 0;
+
 void abertura() {
 	printf("/****************/\n");
     printf("/ Jogo de Forca */\n");
     printf("/****************/\n\n");
 }
 
-void chuta(char chutes[26], int* tentativas) {
+void chuta() {
 	char chute;
 	scanf(" %c", &chute);
 
-	chutes[(*tentativas)] = chute;
-	(*tentativas)++;
+	chutes[tentativas] = chute;
+	tentativas++;
 }
 
-int jaChutou(char palavraSecreta[20], char chutes[26], int tentativas) {
+int jaChutou(char letra) {
 	int achou = 0;
 
 	for (int j = 0; j < tentativas; j++) {
@@ -28,11 +33,11 @@ int jaChutou(char palavraSecreta[20], char chutes[26], int tentativas) {
 	return achou;
 }
 
-void desenhaForca(char palavraSecreta[20], char chutes[26], int tentativas) {
+void desenhaForca() {
 	for (int i = 0; i < strlen(palavraSecreta); i++) {
 
 		// a letra já foi chutada?
-		int achou = jaChutou(palavraSecreta[i], chutes, tentativas);
+		int achou = jaChutou(palavraSecreta[i]);
 
 		if (achou) {
 			printf("%c ", palavraSecreta[i]);
@@ -43,25 +48,21 @@ void desenhaForca(char palavraSecreta[20], char chutes[26], int tentativas) {
 	printf("\n");
 }
 
-void escolhePalavra(char palavraSecreta[20]) {
+void escolhePalavra() {
 	sprintf(palavraSecreta, "MELANCIA");
 }
 
 int main() {
-	char palavraSecreta[20];
-	int acertou, enforcou, tentativas = 0;
-	char chutes[26];
+	int acertou, enforcou = 0;
 
-	escolhePalavra(palavraSecreta);
+	escolhePalavra();
     abertura();
 
 	do {
-		desenhaForca(palavraSecreta, chutes, tentativas);
-		chuta(chutes, &tentativas);
+		desenhaForca();
+		chuta();
 
 	} while (!acertou && !enforcou);
-
-	printf("%s", palavraSecreta);
 
 	return 0;
 }

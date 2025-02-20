@@ -15,8 +15,7 @@ void chuta(char chutes[26], int* tentativas) {
 	(*tentativas)++;
 }
 
-int main()
-{
+int main() {
 	char palavraSecreta[20];
 
 	sprintf(palavraSecreta, "MELANCIA");

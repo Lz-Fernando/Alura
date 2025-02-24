@@ -5,3 +5,4 @@ void desenhaForca();
 void escolhePalavra();
 int acertou();
 int enforcou();
+void adicionaPalavra();

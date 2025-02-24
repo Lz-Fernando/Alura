@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <string.h>
+#include "forca.h"
 
 //variáveis globais
 char palavraSecreta[20];
 char chutes[26];
 int chutesDados = 0;
 
+//Funções
 void abertura() {
 	printf("/****************/\n");
     printf("/ Jogo de Forca */\n");
@@ -80,6 +82,8 @@ int enforcou() {
 	return erros >= 5;
 }
 
+
+//Main
 int main() {
 	escolhePalavra();
     abertura();

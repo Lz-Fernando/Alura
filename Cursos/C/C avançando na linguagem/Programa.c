@@ -5,7 +5,7 @@
 #include "forca.h"
 
 //variáveis globais
-char palavraSecreta[20];
+char palavraSecreta[TAMANHO_PALAVRA];
 char chutes[26];
 int chutesDados = 0;
 
@@ -17,11 +17,20 @@ void abertura() {
 }
 
 void chuta() {
-	char chute;
-	scanf(" %c", &chute);
+    char chute;
+    printf("Qual letra? ");
+    scanf(" %c", &chute);
 
-	chutes[chutesDados] = chute;
-	chutesDados++;
+    if(letraexiste(chute)) {
+        printf("Você acertou: a palavra tem a letra %c\n\n", 
+            chute);
+    } else {
+        printf("\nVocê errou: a palavra NÃO tem a letra %c\n\n", 
+            chute);
+    }
+
+    chutes[chutesDados] = chute;
+    chutesDados++;
 }
 
 int jaChutou(char letra) {
@@ -37,7 +46,33 @@ int jaChutou(char letra) {
 	return achou;
 }
 
+int letraexiste(char letra) {
+
+    for(int j = 0; j < strlen(palavraSecreta); j++) {
+        if(letra == palavraSecreta[j]) {
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+int chuteserrados() {
+    int erros = 0;
+
+    for(int i = 0; i < chutesDados; i++) {
+
+        if(!letraexiste(chutes[i])) {
+            erros++;
+        }
+    }
+
+    return erros;
+}
+
 void desenhaForca() {
+	printf("Forca:");
+
 	for (int i = 0; i < strlen(palavraSecreta); i++) {
 
 		// a letra já foi chutada?
@@ -132,7 +167,7 @@ int enforcou() {
 
 		if(!existe) erros++;
 	}
-	return erros >= 5;
+	return chuteserrados() >= 5;
 }
 
 
@@ -148,6 +183,12 @@ int main() {
 	} while (!acertou() && !enforcou());
 
 	adicionaPalavra();
+
+	if(acertou()) {
+		printf("parabéns!");
+	} else {
+		printf("Você perdeu!");
+	}
 
 	return 0;
 }

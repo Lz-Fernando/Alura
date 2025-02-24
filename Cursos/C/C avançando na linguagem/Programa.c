@@ -53,23 +53,13 @@ void desenhaForca() {
 }
 
 void escolhePalavra() {
-	sprintf(palavraSecreta, "MELANCIA");
-}
-
-int acertou() {
-	for(int i = 0; i < strlen(palavraSecreta); i++) {
-		if(!jaChutou(palavraSecreta[i])) {
-			return 0;
-		}
-	}
-
-	return 1;
-}
-
-void escolhePalavra() {
 	FILE* f;
 
 	fopen("palavras.txt", "r");
+	if(f == 0) {
+		printf("Desculpe, banco de dados não disponível\n\n");
+		exit(1);
+	}
 
 	int quantidadePalavras;
 	fscanf(f, "%d", &quantidadePalavras);
@@ -82,6 +72,16 @@ void escolhePalavra() {
 	}
 
 	fclose(f);
+}
+
+int acertou() {
+	for(int i = 0; i < strlen(palavraSecreta); i++) {
+		if(!jaChutou(palavraSecreta[i])) {
+			return 0;
+		}
+	}
+
+	return 1;
 }
 
 int enforcou() {

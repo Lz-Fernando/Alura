@@ -1,0 +1,34 @@
+Um dicionário de dados é uma ferramenta importante para a gestão de dados em uma empresa, pois ele descreve as informações que são armazenadas, ajudando a garantir que os dados sejam consistentes e precisos. A gestão desses dados ajuda a equipe de análise de dados a compreender melhor as informações disponíveis e tomar decisões mais informadas e precisas.
+
+Segue abaixo o dicionário dos dados usados durante o curso:
+
+Cliente
+
+genero: gênero (masculino e feminino)
+idoso: informação sobre um(a) cliente ter ou não idade igual ou maior que 65 anos
+parceiro: se o(a) cliente possui ou não um(a) parceiro ou parceira
+dependentes: se o(a) cliente possui ou não dependentes
+tempo_servico: meses de contrato do(a) cliente
+
+Serviço de telefonia
+
+servico_telefone: assinatura de serviço telefônico
+varias_linhas: assinatura de mais de uma linha de telefone
+
+Serviço de internet
+
+servico_internet: assinatura de um provedor internet
+seguranca_online: assinatura adicional de segurança online
+backup_online: assinatura adicional de backup online
+protecao_dispositivo: assinatura adicional de proteção no dispositivo
+suporte_tecnico: assinatura adicional de suporte técnico, menos tempo de espera
+tv_streaming: assinatura de TV a cabo
+filmes_streaming: assinatura de streaming de filmes
+
+Conta
+
+contrato: tipo de contrato
+faturamente_eletronico: se o(a) cliente prefere receber a fatura online
+metodo_pagamento: forma de pagamento
+cobranca.mensal: total de todos os serviços do(a) cliente por mês
+cobranca.Total: total gasto pelo(a) cliente
